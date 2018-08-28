@@ -3,7 +3,7 @@
 
 
 import math
-from matplotlib.
+import matplotlib.pyplot as plt
 
 
 wektor_cech = [1, 1, 2, 2, 3, 4, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 9, 9, 10, 10, 12, 12, 12, 12, 13, 14, 14, 14, 15, 15, 15, 15, 15, 15, 16, 18, 20, 23, 25, 30]
@@ -48,3 +48,11 @@ list_of_tests = [
 
 
 print_result(list_of_tests)
+
+num_bins = 6
+
+fig, ax = plt.subplots()
+n, bins, patches = ax.hist(wektor_cech, num_bins, density=1)
+
+fig.tight_layout()
+plt.show()
